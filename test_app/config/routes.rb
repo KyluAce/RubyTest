@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'stronas/show'
+
+  get 'stronas/new'
+
+  get 'stronas/delete'
+
+  get 'stronas/edit'
+
+  get 'stronas/index'
+
   root 'test#index'
 
   match ':controller(/:action(/:id))', :via => [:get, :post]

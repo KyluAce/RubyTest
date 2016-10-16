@@ -2,7 +2,7 @@ class CreateArtykuls < ActiveRecord::Migration
   def up
     create_table :artykuls do |t|
 
-    	t.integer "page_id"
+    	t.integer "strona_id"
     	t.string  "name"
     	t.integer "position"
     	t.boolean "visibility", :default=>true
@@ -15,4 +15,5 @@ class CreateArtykuls < ActiveRecord::Migration
   def down
 	drop_table :artykuls
 end
+
 end
