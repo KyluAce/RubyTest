@@ -1,0 +1,36 @@
+<div class = "hero-unit">
+<h1>Galeries</h1>
+
+<%= link_to("Add new galery ", {:action => 'new',}, :class => 'btn btn-mini btn-primary')%>
+
+<p>Ilość galerii: <%= @galery.size%> </p>
+
+<table class="table table-striped">
+
+	<tr class = "info">
+
+		<th>name</th>
+		<th>position</th>
+		<th>visibility </th>
+		<th>actions </th>
+		</tr>
+<% @galery.each do |gal| %>
+
+	</tr>
+
+		<td><%= gal.name %></td>
+		<td><%= gal.position %></td>
+		<td class = "center"><%= status(gal.visibility)%></td>
+		
+		<td class = "actions">
+
+		<%= link_to("Show", {:action => 'show', :id => gal.id}, :class => 'btn btn-xs btn-default')%>
+		<%= link_to("Edit", {:action => 'edit', :id => gal.id}, :class => 'btn btn-xs btn-primary')%>
+		<%= link_to("Delete", {:action => 'delete', :id => gal.id }, :class => 'btn btn-xs btn-danger')%>
+		 	
+		 </td>
+	</tr>
+	<% end %>
+
+</table>
+</div> 

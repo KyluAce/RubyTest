@@ -1,0 +1,16 @@
+<div class = "hero_unit">
+<h1>New Article</h1>
+
+<%= form_for(:artykuls, :url =>{:action => 'create'}) do |pole| %>
+
+<%= render(:partial => "form", :locals => {:pole => pole})%>
+
+
+<div style="text-align: center">
+<%= link_to("Back", {:action => 'index'}, :class => 'btn btn-primary' )%>
+<%= submit_tag("Create", :class => 'btn btn-primary')%>
+
+</div>
+
+	<% end %>
+	</div>

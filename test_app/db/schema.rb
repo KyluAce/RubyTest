@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20161012163133) do
 
   create_table "artykuls", force: :cascade do |t|
-    t.integer  "strona_id",           limit: 4
+    t.integer  "strona_id",           limit: 10
     t.string   "name",                limit: 255
     t.integer  "position",            limit: 4
     t.boolean  "visibility",                        default: true

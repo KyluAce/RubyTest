@@ -1,0 +1,17 @@
+<div class = "hero_unit">
+<h1>Edit Article <%= @artykuls.name%></h1>
+
+<%= form_for(:artykuls, :url =>{:action => 'update', :id => @artykuls.id}) do |pole| %>
+
+
+<%= render(:partial => "form", :locals => {:pole => pole})%>
+
+
+<div style="text-align: center">
+<%= link_to("Back", {:action => 'index'}, :class => 'btn btn-primary' )%>
+<%= submit_tag("Update", :class => 'btn btn-primary')%>
+
+</div>
+
+	<% end %>
+	</div>

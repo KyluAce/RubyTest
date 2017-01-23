@@ -1,5 +1,35 @@
 Rails.application.routes.draw do
 
+  get 'images/index'
+
+  get 'images/new'
+
+  get 'images/show'
+
+  get 'images/delete'
+
+  get 'images/edit'
+
+  get 'galeries/index'
+
+  get 'galeries/new'
+
+  get 'galeries/show'
+
+  get 'galeries/delete'
+
+  get 'galeries/edit'
+
+  get 'artykuls/index'
+
+  get 'artykuls/show'
+
+  get 'artykuls/edit'
+
+  get 'artykuls/new'
+
+  get 'artykuls/delete'
+
   get 'stronas/show'
 
   get 'stronas/new'

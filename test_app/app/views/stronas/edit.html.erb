@@ -1,0 +1,19 @@
+<div class = "hero_unit">
+<h1>Edit Page <%= @strona.name%></h1>
+
+<%= link_to("Back", {:action => 'index'})%>
+
+<%= form_for(:strona, :url =>{:action => 'update', :id => @strona.id}) do |pole| %>
+
+
+<%= render(:partial => "form", :locals => {:pole => pole})%>
+
+
+<div style="text-align: center">
+<%= link_to("Back", {:action => 'index'}, :class => 'btn btn-primary' )%>
+<%= submit_tag("Update", :class => 'btn btn-primary')%>
+
+</div>
+
+	<% end %>
+	</div>

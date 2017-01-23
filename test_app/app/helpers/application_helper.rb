@@ -1,5 +1,12 @@
 module ApplicationHelper
 
+
+def blad(objekt)
+	render(:partial=>'dodatki/bledy', :locals=>{:objekt=>objekt})
+end
+
+
+
 	def status (boolean, options={})
 		options[:true_text]  ||= ''
 		options[:false_text] ||= ''

@@ -1,0 +1,44 @@
+<%= blad(@galery)%>
+<table class = "table table-striped">
+
+
+
+	<tr>
+	<th> <%= pole.label(:name)%> </th>
+	<td> <%= pole.text_field(:name, :class => 'form-control')%>  </td>
+	</tr>
+
+	<tr>
+	<th> <%= pole.label(:position)%> </th>
+	<td> <%= pole.select(:position, 1..@licznik, :class => 'form-control')%>  </td>
+	</tr>
+
+<% if !@galery.pictures.blank?%>
+	<tr>
+	<th>Image: </th>
+	<td> <%= image_tag(@galery.pictures)%>  </td>
+	</tr>
+<% end %>
+
+	<tr>
+	<th> <%= pole.label(:pictures, "Image")%> </th>
+	<td> <%= pole.file_field(:pictures)%>  </td>
+	</tr>
+
+
+	<tr>
+	<th> <%= pole.label(:visibility, "Widoczny?")%> </th>
+	<td> <%= pole.check_box(:visibility)%>  </td>
+	</tr>
+
+	<tr>
+	<th> <%= pole.label(:created_at)%> </th>
+	<td> <%= pole.datetime_select(:created_at, :class => 'form-control')%>  </td>
+	</tr>	
+
+	<tr>
+	<th> <%= pole.label(:content)%> </th>
+	<td> <%= pole.text_area(:content, :class => 'form-control')%>  </td>
+	</tr>
+
+</table>
